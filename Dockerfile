@@ -10,5 +10,5 @@ VOLUME /tmp
 # 将jar包添加到容器中并更名为app.jar
 ADD es-study-1.0-SNAPSHOT.jar app.jar
 # 运行jar包
-RUN bash -C 'touch /app.jar'
+RUN bash -c 'touch /app.jar'
 ENTRYPOINT ["java","-Dlsjava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
