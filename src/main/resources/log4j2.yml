@@ -32,29 +32,7 @@ Configuration:
             size: "128 MB"
         DefaultRolloverStrategy:
           max: 1000
-    JDBC: #输出到数据库中
-      name: DATABASE
-      tableName: log
-      ConnectionFactory:
-        class: com.light.springboot.config.DruidConfig
-        method: getConnection
-      Column:
-        - name: CREATE_TIME
-          pattern: "%d{yyyy-MM-dd hh:mm:ss}"
-        - name:  TYPE
-          pattern: "%X{TYPE}"
-        - name: SYSTEM_INFO
-          pattern: "%X{SYSTEM_INFO}"
-        - name: HOST
-          pattern: "%X{HOST}"
-        - name: DB_CONNECT
-          pattern: "%X{DB_CONNECT}"
-        - name: LOCATION
-          pattern: "%l"
-        - name: LOG_LEVEL
-          pattern: "%p"
-        - name: MESSAGE
-          pattern: "%m"
+
   Loggers:
     Root:
       level: info
@@ -68,4 +46,3 @@ Configuration:
         AppenderRef:
           - ref: CONSOLE
           - ref: ROLLING_FILE
-          - ref: DATABASE

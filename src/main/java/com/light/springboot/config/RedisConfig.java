@@ -5,17 +5,11 @@
  * @since 版本号
  */
 
-package com.light.springboot.config;/**
- * @author 李振振
- * @date 2021/4/26 17:14
- * @version 1.0
- */
+package com.light.springboot.config;
 
-import com.alibaba.fastjson.parser.ParserConfig;
-import com.alibaba.fastjson.support.config.FastJsonConfig;
-import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.context.annotation.Bean;
@@ -30,13 +24,10 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
-import java.io.Serializable;
-import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 
 /**
- * 〈一句话功能简述〉
- *
+ * 〈一句话功能简述〉redis配置类
  * <p>〈功能详细描述〉
  *
  * @author lzz
@@ -51,8 +42,8 @@ public class RedisConfig {
     @Value("${spring.redis.port:#{6379}}")
     private int port;
 
-//    @Value("${spring.redis.password:#{'009014'}}")
-//    private String password;
+    @Value("${spring.redis.password:#{'root'}}")
+    private String password;
 
     @Value("${spring.redis.timeout:#{3000}}")
     private int timeout;
@@ -79,7 +70,7 @@ public class RedisConfig {
         ((RedisStandaloneConfiguration) redisConfiguration).setDatabase(databaseId);
 
 //        // 设置 redis 数据库密码
-//        ((RedisStandaloneConfiguration) redisConfiguration).setPassword(password);
+        ((RedisStandaloneConfiguration) redisConfiguration).setPassword(password);
 
         // 连接池配置
         GenericObjectPoolConfig<Object> poolConfig = new GenericObjectPoolConfig<>();

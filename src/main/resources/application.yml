@@ -4,7 +4,7 @@ application:
   upload: /upload/**
 spring:
   redis:
-    host: 192.168.91.16
+    host: ubuntu.wsl
     port: 6379
     lettuce:
       pool:
@@ -23,9 +23,9 @@ spring:
     active: dev
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://localhost:3306/jira?verifyServerCertificate=false&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
-    username: gmyf
-    password: "009014" #这里要加引号，不然会提示报错
+    url: jdbc:mysql://ubuntu.wsl:3306/jira?verifyServerCertificate=false&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+    username: root
+    password: "123456" #这里要加引号，不然会提示报错
     driver-class-name: com.mysql.cj.jdbc.Driver
     tomcat:
       max-idle: 10

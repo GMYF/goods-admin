@@ -32,7 +32,6 @@ public class ScheduleTask implements DisposableBean {
 
     private EmailService emailService;
 
-    @Autowired
     public ScheduleTask(EmailService emailService) {
         this.emailService = emailService;
     }
