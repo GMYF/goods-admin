@@ -1,4 +1,30 @@
-server:
-  port: 8082
-  tomcat:
-    uri-encoding: utf-8
+spring:
+  elasticsearch:
+    rest:
+      uris: ubuntu.wsl:9200
+      read-timeout: 2000
+      connection-timeout: 200
+  redis:
+    host: ubuntu.wsl
+    port: 6379
+    lettuce:
+      pool:
+        max-wait: 16
+        max-active: 16
+        max-idle: 16
+        min-idle: 1
+      shutdown-timeout: 10000ms
+    database: 0
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 30MB
+      enabled: true
+  profiles:
+    active: dev
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://ubuntu.wsl:3306/jira?verifyServerCertificate=false&useSSL=true&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+    username: root
+    password: "123456" #这里要加引号，不然会提示报错
+    driver-class-name: com.mysql.cj.jdbc.Driver
