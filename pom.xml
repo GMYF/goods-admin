@@ -28,7 +28,7 @@
         <redis-spring-version>1.4.1.RELEASE</redis-spring-version>
         <commons-pool.version>2.11.1</commons-pool.version>
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
-        <fastjson.version>1.2.80</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <druid.version>1.2.8</druid.version>
         <email.version>1.4</email.version>
         <junit.version>4.13.2</junit.version>
