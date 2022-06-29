@@ -30,7 +30,7 @@
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
         <fastjson.version>1.2.83</fastjson.version>
         <druid.version>1.2.8</druid.version>
-        <email.version>1.4</email.version>
+        <email.version>1.5</email.version>
         <junit.version>4.13.2</junit.version>
         <lombok.version>1.18.22</lombok.version>
     </properties>
