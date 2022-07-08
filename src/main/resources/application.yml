@@ -4,7 +4,7 @@ application:
   upload: /upload/**
 mybatis-plus:
   mapper-locations: classpath*:mappers/**/*Mapper.xml
-  type-aliases-package: com.light.springboot.dao
+  type-aliases-package: com.light.springboot.core.dao
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true

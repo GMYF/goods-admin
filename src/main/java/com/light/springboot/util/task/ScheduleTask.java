@@ -1,19 +1,15 @@
 package com.light.springboot.util.task;
 
 import com.alibaba.fastjson.JSON;
-import com.light.springboot.domain.email.Email;
-import com.light.springboot.service.common.EmailService;
+import com.light.springboot.core.domain.email.Email;
+import com.light.springboot.core.service.common.EmailService;
 import com.light.springboot.util.bean.SpringContextUtil;
 import com.light.springboot.util.email.EmailUtil;
 import com.light.springboot.util.log.LogUtil;
-import lombok.Getter;
-import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.stereotype.Component;
 

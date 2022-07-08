@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @author lzz
  */
 @org.springframework.boot.autoconfigure.SpringBootApplication
-@MapperScan("com.light.springboot.dao")
+@MapperScan("com.light.springboot.core.dao")
 @EnableScheduling
 public class SpringBootApplication {
     public static void main(String [] args){

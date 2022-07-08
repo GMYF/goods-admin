@@ -33,6 +33,7 @@
         <email.version>1.4</email.version>
         <junit.version>4.13.2</junit.version>
         <lombok.version>1.18.22</lombok.version>
+        <guava.version>28.0-jre</guava.version>
     </properties>
 
     <dependencies>
@@ -53,6 +54,19 @@
                 </exclusion>
                 <!-- 去除内嵌的tomcat容器 -->
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
