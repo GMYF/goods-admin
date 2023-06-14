@@ -33,7 +33,7 @@
         <email.version>1.4</email.version>
         <junit.version>4.13.2</junit.version>
         <lombok.version>1.18.22</lombok.version>
-        <guava.version>28.0-jre</guava.version>
+        <guava.version>32.0.0-jre</guava.version>
     </properties>
 
     <dependencies>
